@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<body>
+
+<label for="ano">Informe o ano:</label>
+<input type="text" id="ano" name="ano">
+<button onclick="calculaSeculo()">Enviar</button>
+<p id="resultado"></p>
+
+<script>
+  function calculaSeculo() {
+    var ano = document.getElementById("ano").value;
+    var seculo = Math.ceil(ano/100);
+    if(ano>0 && ano <=2023) 
+      document.getElementById("resultado").innerHTML = "O ano " + ano + " pertence ao século " + seculo + ".";
+    else
+      document.getElementById("resultado").innerHTML = "Ano inválido, digite um ano entre 1 e 2023"
+  }
+
+</script>
+
+</body>
+</html>
+
+
+
+
